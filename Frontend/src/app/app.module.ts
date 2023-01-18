@@ -5,18 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SwiperModule } from 'swiper/angular';
+//Angular Material
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTabsModule } from '@angular/material/tabs';
 
-// import { HelloWorld } from '../components/hello-world';
-// import { HeaderSliderComponent } from './header-slider/header-slider.component';
+//Swiper
+import { SwiperModule } from 'swiper/angular';
+import { SwiperHeaderComponent } from './swiper-header/swiper-header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SwiperHeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SwiperModule,
+    MatSlideToggleModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
