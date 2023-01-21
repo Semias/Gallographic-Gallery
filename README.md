@@ -1,6 +1,11 @@
 # Gallographic Gallery (@Angular)
 
 This project represents all my photos during the last few years.
+It Includes following functionality:
+
+- Dark Mode toggle that is connected to localStorage and get initialized with System Theme
+- Progress Bar that show how far you already scrolled
+- Photoalbum that opens on click a modal slider gallery
 
 ---
 
