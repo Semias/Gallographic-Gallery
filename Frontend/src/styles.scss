@@ -1,55 +1,43 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use "@angular/material" as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$gallographic-angular-primary: mat.define-palette(mat.$indigo-palette);
-$gallographic-angular-accent: mat.define-palette(
-  mat.$pink-palette,
-  A200,
-  A100,
-  A400
-);
-
-// The warn palette is optional (defaults to red).
-$gallographic-angular-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$gallographic-angular-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $gallographic-angular-primary,
-      accent: $gallographic-angular-accent,
-      warn: $gallographic-angular-warn,
-    ),
-  )
-);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($gallographic-angular-theme);
-
 /* You can add global styles to this file, and also import other style files */
 
-@import "swiper/scss";
-@import "swiper/scss/navigation";
-@import "swiper/scss/pagination";
+@import "swiper/css/bundle";
+@import "variables.scss";
+
+$primary-bg: #303030;
+$primary-bg-contrast: white;
+
+*,
+*::after,
+*::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  border-radius: none;
+  -webkit-border-radius: 0;
+}
 
 html,
 body {
   height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "work sans";
+  background-color: $primary-bg;
+  color: $primary-bg-contrast;
+
+  &.light-theme {
+    background-color: $primary-bg-contrast;
+    color: $primary-bg;
+  }
 }

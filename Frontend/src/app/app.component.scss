@@ -1,0 +1,53 @@
+.light-theme {
+  :host {
+    header {
+      figure {
+        img {
+          filter: brightness(0) saturate(100%) invert(14%) sepia(17%)
+            saturate(22%) hue-rotate(23deg) brightness(94%) contrast(86%);
+        }
+      }
+    }
+  }
+}
+
+.dark-theme {
+  :host {
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+
+  figure {
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    a {
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      img {
+        height: 100%;
+        padding: 1.5rem 0;
+      }
+    }
+  }
+}
+
+aside {
+  position: fixed;
+  right: 5%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  height: 100%;
+  padding: 3rem 0px;
+}

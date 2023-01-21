@@ -4,6 +4,6 @@
   (slideChange)="onSlideChange()"
 >
   <ng-template swiperSlide *ngFor="let headerImage of headerImages">
-    <img src="{{ headerImage }}" alt="" />
+    <img src="{{ headerImage.src }}" alt="{{ headerImage.alt }}" />
   </ng-template>
 </swiper>
