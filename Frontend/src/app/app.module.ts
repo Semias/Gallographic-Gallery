@@ -20,6 +20,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 
 //SidePanel
 import { ThemeButtonComponent } from './components/theme-button/theme-button.component';
+import { SiteProgressComponent } from './components/site-progress/site-progress.component';
+import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ThemeButtonComponent } from './components/theme-button/theme-button.com
     // SwiperHeaderComponent,
     GalleryComponent,
     ThemeButtonComponent,
+    SiteProgressComponent,
+    ScrollTopComponent,
   ],
   imports: [
     BrowserModule,
