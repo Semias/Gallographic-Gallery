@@ -1,6 +1,10 @@
 @import "../../../styles.scss";
 
 :host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
   border-radius: 50%;
   transition: 0.2s;
 
