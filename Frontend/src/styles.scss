@@ -6,6 +6,11 @@
 $primary-bg: #303030;
 $primary-bg-contrast: white;
 
+:root {
+  --primary-bg: #303030;
+  --primary-bg-contrast: white;
+}
+
 *,
 *::after,
 *::before {

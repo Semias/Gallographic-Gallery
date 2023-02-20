@@ -8,6 +8,17 @@
         }
       }
     }
+
+    aside {
+      app-scroll-top {
+        &::ng-deep { 
+          .scroll-top-button {
+            background-color: white;
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -52,4 +63,5 @@ aside {
   z-index: 10;
   height: 100%;
   padding: 3rem 0px;
+  
 }
