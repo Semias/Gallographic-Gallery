@@ -3,19 +3,18 @@
 @import "swiper/css/bundle";
 @import "variables.scss";
 
-$primary-bg: #303030;
-$primary-bg-contrast: white;
-
 :root {
-  --ciprime: #42b883;
+  --ciprime: #f55050;
 
   --text-dark: #000;
   --cibg-dark: #303030;
   --cibg2-dark: #404040;
+  --cibg3-dark: #505050;
 
   --text-light: #ffffff;
   --cibg-light: #fff;
   --cibg2-light: #f0f0f0;
+  --cibg3-light: #e6e6e6;
 
   --shadow1: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
@@ -49,34 +48,27 @@ body {
   font-family: "work sans";
   background-color: var(--cibg);
   color: var(--text);
-
-  // &.light-theme {
-  //   background-color: $primary-bg-contrast;
-  //   color: $primary-bg;
-
-  //   &::-webkit-scrollbar-track {
-  //     background: white;
-  //   }
-
-  //   &::-webkit-scrollbar-thumb {
-  //     background-color: $primary-bg;
-  //   }
-  // }
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
 
   &[color-scheme="dark"] {
     --text: var(--text-light);
     --cibg: var(--cibg-dark);
+    --cibg-contrast: var(--cibg-light);
     --cibg2: var(--cibg2-dark);
+    --cibg3: var(--cibg3-dark);
   }
 
   &[color-scheme="light"] {
     --text: var(--text-dark);
     --cibg: var(--cibg-light);
+    --cibg-contrast: var(--cibg-dark);
     --cibg2: var(--cibg2-light);
+    --cibg3: var(--cibg3-dark);
   }
 
   /* Scroll bar */
-
   &::-webkit-scrollbar {
     width: 7px;
   }
@@ -86,6 +78,6 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--cibg2);
+    background-color: var(--ciprime);
   }
 }

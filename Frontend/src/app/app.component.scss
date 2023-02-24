@@ -1,37 +1,26 @@
-// .light-theme {
-//   :host {
-//     header {
-//       figure {
-//         img {
-//           filter: brightness(0) saturate(100%) invert(14%) sepia(17%)
-//             saturate(22%) hue-rotate(23deg) brightness(94%) contrast(86%);
-//         }
-//       }
-//     }
+[color-scheme="light"] {
+  :host {
+    header {
+      figure {
+        img {
+          filter: brightness(0) saturate(100%) invert(14%) sepia(17%)
+            saturate(22%) hue-rotate(23deg) brightness(94%) contrast(86%);
+        }
+      }
+    }
+  }
+}
 
-//     aside {
-//       app-scroll-top {
-//         &::ng-deep {
-//           .scroll-top-button {
-//             background-color: white;
-//           }
-//         }
-//       }
-//     }
-
-//   }
-// }
-
-// .dark-theme {
-//   :host {
-//   }
-// }
+[color-scheme="dark"] {
+  :host {
+  }
+}
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 150px;
 
   figure {
     height: 100%;
