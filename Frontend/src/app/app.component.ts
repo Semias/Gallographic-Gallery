@@ -13,26 +13,27 @@ export class AppComponent implements OnInit {
   }
 
   checkAndSetSystemTheme = () => {
+    let themeSwitcher = document.querySelector('app-theme-button');
+    let body = document.querySelector('body');
+    let matchDark = window.matchMedia('(prefers-color-scheme: dark)');
+    let matchLight = window.matchMedia('(prefers-color-scheme: light)');
+
     if (localStorage.getItem('theme') === 'dark-theme') {
-      document.querySelector('body')?.classList.add('dark-theme');
-      document.querySelector('app-theme-button')?.classList.add('dark-theme');
+      body?.classList.add('dark-theme');
+      themeSwitcher?.classList.add('dark-theme');
+      body?.setAttribute('color-scheme', 'dark');
     } else if (localStorage.getItem('theme') === 'light-theme') {
-      document.querySelector('body')?.classList.add('light-theme');
-      document.querySelector('app-theme-button')?.classList.add('light-theme');
-    } else if (
-      !localStorage.getItem('theme') &&
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      document.querySelector('body')?.classList.add('dark-theme');
-      document.querySelector('app-theme-button')?.classList.add('dark-theme');
-    } else if (
-      !localStorage.getItem('theme') &&
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: light)').matches
-    ) {
-      document.querySelector('body')?.classList.add('light-theme');
-      document.querySelector('app-theme-button')?.classList.add('light-theme');
+      body?.classList.add('light-theme');
+      themeSwitcher?.classList.add('light-theme');
+      body?.setAttribute('color-scheme', 'light');
+    } else if (!localStorage.getItem('theme') && matchDark.matches) {
+      body?.classList.add('dark-theme');
+      themeSwitcher?.classList.add('dark-theme');
+      body?.setAttribute('color-scheme', 'dark');
+    } else if (!localStorage.getItem('theme') && matchLight.matches) {
+      body?.classList.add('light-theme');
+      themeSwitcher?.classList.add('light-theme');
+      body?.setAttribute('color-scheme', 'light');
     }
   };
 }

@@ -11,9 +11,13 @@ $primary-bg-contrast: white;
 
   --text-dark: #000;
   --cibg-dark: #303030;
+  --cibg2-dark: #404040;
 
   --text-light: #ffffff;
   --cibg-light: #fff;
+  --cibg2-light: #f0f0f0;
+
+  --shadow1: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
 
 *,
@@ -62,11 +66,13 @@ body {
   &[color-scheme="dark"] {
     --text: var(--text-light);
     --cibg: var(--cibg-dark);
+    --cibg2: var(--cibg2-dark);
   }
 
   &[color-scheme="light"] {
     --text: var(--text-dark);
     --cibg: var(--cibg-light);
+    --cibg2: var(--cibg2-light);
   }
 
   /* Scroll bar */
@@ -76,10 +82,10 @@ body {
   }
 
   &::-webkit-scrollbar-track {
-    background: $primary-bg;
+    background: var(--cibg);
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: var(--cibg2);
   }
 }

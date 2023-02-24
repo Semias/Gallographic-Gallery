@@ -10,17 +10,19 @@ export class ThemeButtonComponent implements OnInit {
   ngOnInit() {}
 
   body = document.querySelector('body');
-  button = document.querySelector('app-theme-button');
+  themeSwitcher = document.querySelector('app-theme-button');
 
   toggleTheme() {
-    if (this.button?.className === 'dark-theme') {
-      this.button.className = 'light-theme';
+    if (this.themeSwitcher?.className === 'dark-theme') {
+      this.themeSwitcher.className = 'light-theme';
       this.body!.className = 'light-theme';
+      this.body!.setAttribute('color-scheme', 'light');
       localStorage.setItem('theme', 'light-theme');
       console.log(localStorage.getItem('theme'));
-    } else if (this.button?.className === 'light-theme') {
-      this.button.className = 'dark-theme';
+    } else if (this.themeSwitcher?.className === 'light-theme') {
+      this.themeSwitcher.className = 'dark-theme';
       this.body!.className = 'dark-theme';
+      this.body!.setAttribute('color-scheme', 'dark');
       localStorage.setItem('theme', 'dark-theme');
       console.log(localStorage.getItem('theme'));
     }

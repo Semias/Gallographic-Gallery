@@ -5,10 +5,10 @@
     align-items: center;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow1);
     cursor: pointer;
     transition: 0.2s;
-    background-color: #404040;
+    background-color: var(--cibg2);
 
     &:hover,
     &:focus {
