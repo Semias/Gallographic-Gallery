@@ -7,8 +7,13 @@ $primary-bg: #303030;
 $primary-bg-contrast: white;
 
 :root {
-  --primary-bg: #303030;
-  --primary-bg-contrast: white;
+  --ciprime: #42b883;
+
+  --text-dark: #000;
+  --cibg-dark: #303030;
+
+  --text-light: #ffffff;
+  --cibg-light: #fff;
 }
 
 *,
@@ -38,20 +43,30 @@ html,
 body {
   height: 3000px;
   font-family: "work sans";
-  background-color: $primary-bg;
-  color: $primary-bg-contrast;
+  background-color: var(--cibg);
+  color: var(--text);
 
-  &.light-theme {
-    background-color: $primary-bg-contrast;
-    color: $primary-bg;
+  // &.light-theme {
+  //   background-color: $primary-bg-contrast;
+  //   color: $primary-bg;
 
-    &::-webkit-scrollbar-track {
-      background: white;
-    }
+  //   &::-webkit-scrollbar-track {
+  //     background: white;
+  //   }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: $primary-bg;
-    }
+  //   &::-webkit-scrollbar-thumb {
+  //     background-color: $primary-bg;
+  //   }
+  // }
+
+  &[color-scheme="dark"] {
+    --text: var(--text-light);
+    --cibg: var(--cibg-dark);
+  }
+
+  &[color-scheme="light"] {
+    --text: var(--text-dark);
+    --cibg: var(--cibg-light);
   }
 
   /* Scroll bar */
