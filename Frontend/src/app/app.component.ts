@@ -19,19 +19,15 @@ export class AppComponent implements OnInit {
     let matchLight = window.matchMedia('(prefers-color-scheme: light)');
 
     if (localStorage.getItem('theme') === 'dark-theme') {
-      body?.classList.add('dark-theme');
       themeSwitcher?.classList.add('dark-theme');
       body?.setAttribute('color-scheme', 'dark');
     } else if (localStorage.getItem('theme') === 'light-theme') {
-      body?.classList.add('light-theme');
       themeSwitcher?.classList.add('light-theme');
       body?.setAttribute('color-scheme', 'light');
     } else if (!localStorage.getItem('theme') && matchDark.matches) {
-      body?.classList.add('dark-theme');
       themeSwitcher?.classList.add('dark-theme');
       body?.setAttribute('color-scheme', 'dark');
     } else if (!localStorage.getItem('theme') && matchLight.matches) {
-      body?.classList.add('light-theme');
       themeSwitcher?.classList.add('light-theme');
       body?.setAttribute('color-scheme', 'light');
     }

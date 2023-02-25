@@ -15,16 +15,12 @@ export class ThemeButtonComponent implements OnInit {
   toggleTheme() {
     if (this.themeSwitcher?.className === 'dark-theme') {
       this.themeSwitcher.className = 'light-theme';
-      this.body!.className = 'light-theme';
       this.body!.setAttribute('color-scheme', 'light');
       localStorage.setItem('theme', 'light-theme');
-      console.log(localStorage.getItem('theme'));
     } else if (this.themeSwitcher?.className === 'light-theme') {
       this.themeSwitcher.className = 'dark-theme';
-      this.body!.className = 'dark-theme';
       this.body!.setAttribute('color-scheme', 'dark');
       localStorage.setItem('theme', 'dark-theme');
-      console.log(localStorage.getItem('theme'));
     }
   }
 }

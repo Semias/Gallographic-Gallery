@@ -1,5 +1,12 @@
 <div class="gallery-container">
   <div class="gallery-column">
-    <p>gallery works!</p>
+    <div *ngFor="let thumbnail of thumbnails" class="gallery-project">
+      <div class="gallery-project-thumbnail">
+        <img src="{{ thumbnail.src }}" alt="{{ thumbnail.alt }}" />
+      </div>
+      <div class="gallery-thumbnail-description">
+        <h2>{{ thumbnail.description }}</h2>
+      </div>
+    </div>
   </div>
 </div>

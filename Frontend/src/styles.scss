@@ -16,6 +16,9 @@
   --cibg2-light: #f0f0f0;
   --cibg3-light: #e6e6e6;
 
+  --cibg-dark-transparency-08: rgba(48, 48, 48, 0.8);
+  --cibg-light-transparency-08: rgba(255, 255, 255, 0.8);
+
   --shadow1: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -58,6 +61,7 @@ body {
     --cibg-contrast: var(--cibg-light);
     --cibg2: var(--cibg2-dark);
     --cibg3: var(--cibg3-dark);
+    --cibg-transparency08: var(--cibg-dark-transparency-08);
   }
 
   &[color-scheme="light"] {
@@ -66,6 +70,7 @@ body {
     --cibg-contrast: var(--cibg-dark);
     --cibg2: var(--cibg2-light);
     --cibg3: var(--cibg3-dark);
+    --cibg-transparency08: var(--cibg-light-transparency-08);
   }
 
   /* Scroll bar */
