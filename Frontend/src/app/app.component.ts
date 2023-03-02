@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Gallographic';
 
+  public albums: any = [];
+  public noData: any;
+  public results: any = [];
+
+  constructor(private apiService: ApiService) {}
+
   ngOnInit() {
     this.checkAndSetSystemTheme();
+    this.getAll();
+  }
+
+  getAll() {
+    this.apiService.getData().subscribe((results) => {
+      this.albums = results;
+      console.log(this.albums);
+    });
   }
 
   checkAndSetSystemTheme = () => {

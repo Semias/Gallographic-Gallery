@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 //Angular Material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -41,6 +42,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
     MatTabsModule,
     MatButtonModule,
     MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

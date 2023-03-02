@@ -6,6 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent {
+  albums = [
+    {
+      thumbnailSrc:
+        '../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg',
+      thumbnailDescription: 'test1',
+      thumbnailAlt: 'test1',
+      albumSliderImages: [
+        '../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg',
+        '../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg',
+      ],
+    },
+  ];
+
   thumbnails = [
     {
       src: '../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg',
