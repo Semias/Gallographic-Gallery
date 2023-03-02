@@ -1,4 +1,14 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  Renderer2,
+  ViewChild,
+  Directive,
+  ViewEncapsulation,
+} from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
 
 // import Swiper core and required modules
@@ -16,14 +26,31 @@ SwiperCore.use([Navigation, Pagination]);
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class GalleryComponent {
+export class GalleryComponent implements AfterViewInit, OnInit {
+  constructor() {}
+
+  ngOnInit() {}
+
+  openModal() {
+    console.log('swiper-opened');
+  }
+
+  closeModal($event: any) {
+    $event.stopPropagation();
+    console.log('swiper-closed');
+  }
+
+  ngAfterViewInit() {}
+
+  //SWIPER OPTIONS
   config: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: true,
     pagination: { clickable: true },
-    scrollbar: { draggable: true },
+    // scrollbar: { draggable: true },
     // autoplay: {
     //   delay: 5000,
     //   disableOnInteraction: false,
@@ -31,17 +58,18 @@ export class GalleryComponent {
     loop: true,
   };
   onSwiper(swiper: any) {
-    console.log(swiper);
+    // console.log(swiper);
   }
   onSlideChange() {
-    console.log('slide change');
+    // console.log('slide change');
   }
 
+  //ALBUMS PHOTO DATA
   albums = [
     {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg',
-      thumbnailDescription: 'test1',
+      thumbnailDescription: 'Aalen 2018',
       thumbnailAlt: 'test1',
       SliderImages: [
         {
@@ -62,45 +90,45 @@ export class GalleryComponent {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/barcelona-thumbnail.jpg',
       thumbnailDescription: 'Barcelona 2019',
-      thumbnailAlt: 'test1',
+      thumbnailAlt: 'Barcelona Album Thumbnail',
       SliderImages: [
         {
-          src: '../../assets/images/gallery/project/mannheim/mannheim01.jpg',
-          alt: 'testalt',
+          src: '../../assets/images/gallery/project/barcelona/barcelona01.jpg',
+          alt: 'barcelona01',
         },
         {
-          src: '../../assets/images/gallery/project/mannheim/mannheim02.jpg',
-          alt: 'testalt',
+          src: '../../assets/images/gallery/project/barcelona/barcelona02.jpg',
+          alt: 'barcelona02',
         },
         {
-          src: '../../assets/images/gallery/project/mannheim/mannheim03.jpg',
-          alt: 'testalt',
+          src: '../../assets/images/gallery/project/barcelona/barcelona03.jpg',
+          alt: 'barcelona03',
         },
       ],
     },
     {
       thumbnailSrc: '../../assets/images/gallery/thumbnails/gti-thumbnail.jpg',
-      thumbnailDescription: 'test1',
+      thumbnailDescription: 'GTI 2020',
       thumbnailAlt: 'test1',
       SliderImages: [
         {
-          src: '../../assets/images/gallery/project/mannheim/mannheim01.jpg',
-          alt: 'testalt',
+          src: '../../assets/images/gallery/project/gti/gti01.jpg',
+          alt: 'gti01',
         },
         {
-          src: '../../assets/images/gallery/project/mannheim/mannheim02.jpg',
-          alt: 'testalt',
+          src: '../../assets/images/gallery/project/gti/gti02.jpg',
+          alt: 'gti02',
         },
         {
-          src: '../../assets/images/gallery/project/mannheim/mannheim03.jpg',
-          alt: 'testalt',
+          src: '../../assets/images/gallery/project/gti/gti03.jpg',
+          alt: 'gti03',
         },
       ],
     },
     {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/mannheim-thumbnail.jpg',
-      thumbnailDescription: 'test1',
+      thumbnailDescription: 'Mannheim 2019',
       thumbnailAlt: 'test1',
       SliderImages: [
         {

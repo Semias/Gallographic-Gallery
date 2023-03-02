@@ -10,15 +10,15 @@
 </aside>
 <main>
   <app-gallery></app-gallery>
-  <div *ngFor="let album of albums">
-    <h3>Repository: {{ album.name }}</h3>
-    <p>{{ album.private }}</p>
-    <p>{{ album.description }}</p>
+  <div *ngFor="let repo of repos">
+    <h3>Repository: {{ repo.name }}</h3>
+    <p>{{ repo.private }}</p>
+    <p>{{ repo.description }}</p>
     <div>
-      <p *ngFor="let data of album.topics">{{ data }}</p>
+      <p *ngFor="let data of repo.topics">{{ data }}</p>
     </div>
 
-    <img src="{{ album.owner.avatar_url }}" alt="" />
+    <img src="{{ repo.owner.avatar_url }}" alt="" />
   </div>
 </main>
 <footer>

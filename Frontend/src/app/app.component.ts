@@ -10,7 +10,7 @@ import { ApiService } from './services/api.service';
 export class AppComponent implements OnInit {
   title = 'Gallographic';
 
-  public albums: any = [];
+  public repos: any = [];
   public noData: any;
   public results: any = [];
 
@@ -23,8 +23,8 @@ export class AppComponent implements OnInit {
 
   getAll() {
     this.apiService.getData().subscribe((results) => {
-      this.albums = results;
-      console.log(this.albums);
+      this.repos = results;
+      console.log(this.repos);
     });
   }
 

@@ -12,7 +12,7 @@ export class ApiService {
     return this.http.get('https://api.github.com/users/semias/repos').pipe(
       catchError((error) => {
         console.log(error);
-        return throwError('Error');
+        return throwError('Something went wrong on API');
       })
     );
   }

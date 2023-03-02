@@ -1,6 +1,11 @@
 <div class="gallery-container">
   <div class="gallery-column">
-    <div *ngFor="let album of albums" class="gallery-project">
+    <div
+      #galleryProject
+      *ngFor="let album of albums"
+      class="gallery-project"
+      (click)="openModal()"
+    >
       <div class="gallery-project-thumbnail">
         <div class="gallery-project-thumbnail-image">
           <img src="{{ album.thumbnailSrc }}" alt="{{ album.thumbnailAlt }}" />
@@ -10,6 +15,9 @@
         </div>
       </div>
       <div class="gallery-project-swiper">
+        <div class="swiper-close" #closeSwiper (click)="closeModal($event)">
+          <mat-icon>close_fullscreen</mat-icon>
+        </div>
         <swiper
           [config]="config"
           (swiper)="onSwiper($event)"

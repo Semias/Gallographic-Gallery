@@ -12,6 +12,23 @@
     .gallery-project {
       width: 44%;
 
+      &.active {
+        .gallery-project-swiper {
+          opacity: 1;
+          pointer-events: all;
+          z-index: 999;
+
+          .swiper {
+            .swiper-wrapper {
+              .swiper-slide {
+                img {
+                }
+              }
+            }
+          }
+        }
+      }
+
       &:nth-child(3n - 1) {
         .gallery-project-thumbnail {
           height: 500px;
@@ -39,6 +56,8 @@
         .gallery-project-thumbnail-image {
           width: 100%;
           height: 100%;
+          display: flex;
+          justify-content: center;
 
           img {
             width: 100%;
@@ -66,6 +85,30 @@
           h2 {
             text-transform: uppercase;
             font-weight: 400;
+          }
+        }
+      }
+
+      .gallery-project-swiper {
+        display: flex;
+        position: fixed;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.856);
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
           }
         }
       }
