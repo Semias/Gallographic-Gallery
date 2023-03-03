@@ -5,10 +5,10 @@ import {
   OnInit,
   QueryList,
   Renderer2,
-  ViewChild,
-  Directive,
   ViewEncapsulation,
+  ViewChildren,
 } from '@angular/core';
+// @ts-ignore
 import { SwiperComponent } from 'swiper/angular';
 
 // import Swiper core and required modules
@@ -29,33 +29,41 @@ SwiperCore.use([Navigation, Pagination]);
   encapsulation: ViewEncapsulation.None,
 })
 export class GalleryComponent implements AfterViewInit, OnInit {
-  constructor() {}
+  @ViewChildren('galleryProject') galleryProject!: QueryList<ElementRef>;
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit() {}
 
-  openModal() {
+  ngAfterViewInit(): void {}
+
+  openModal($event: any) {
+    this.renderer.addClass($event, 'active');
     console.log('swiper-opened');
   }
 
-  closeModal($event: any) {
+  closeModal(el: any, $event: any) {
     $event.stopPropagation();
+    this.renderer.removeClass(el, 'active');
     console.log('swiper-closed');
   }
-
-  ngAfterViewInit() {}
 
   //SWIPER OPTIONS
   config: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: true,
-    pagination: { clickable: true },
+    pagination: {
+      clickable: true,
+      // el: '.swiper-pagination',
+      // type: 'bullets',
+    },
     // scrollbar: { draggable: true },
     // autoplay: {
     //   delay: 5000,
     //   disableOnInteraction: false,
     // },
     loop: true,
+    speed: 500,
   };
   onSwiper(swiper: any) {
     // console.log(swiper);
@@ -69,7 +77,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
     {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg',
-      thumbnailDescription: 'Aalen 2018',
+      thumbnailDescription: 'Aalen | 2018',
       thumbnailAlt: 'test1',
       SliderImages: [
         {
@@ -89,7 +97,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
     {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/barcelona-thumbnail.jpg',
-      thumbnailDescription: 'Barcelona 2019',
+      thumbnailDescription: 'Barcelona | 2019',
       thumbnailAlt: 'Barcelona Album Thumbnail',
       SliderImages: [
         {
@@ -108,7 +116,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
     },
     {
       thumbnailSrc: '../../assets/images/gallery/thumbnails/gti-thumbnail.jpg',
-      thumbnailDescription: 'GTI 2020',
+      thumbnailDescription: 'GTI | 2020',
       thumbnailAlt: 'test1',
       SliderImages: [
         {
@@ -128,7 +136,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
     {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/mannheim-thumbnail.jpg',
-      thumbnailDescription: 'Mannheim 2019',
+      thumbnailDescription: 'Mannheim | 2019',
       thumbnailAlt: 'test1',
       SliderImages: [
         {

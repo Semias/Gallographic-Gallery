@@ -4,7 +4,7 @@
       #galleryProject
       *ngFor="let album of albums"
       class="gallery-project"
-      (click)="openModal()"
+      (click)="openModal(galleryProject)"
     >
       <div class="gallery-project-thumbnail">
         <div class="gallery-project-thumbnail-image">
@@ -15,7 +15,11 @@
         </div>
       </div>
       <div class="gallery-project-swiper">
-        <div class="swiper-close" #closeSwiper (click)="closeModal($event)">
+        <div
+          class="swiper-close"
+          #closeSwiper
+          (click)="closeModal(galleryProject, $event)"
+        >
           <mat-icon>close_fullscreen</mat-icon>
         </div>
         <swiper
