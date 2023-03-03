@@ -128,8 +128,15 @@
           align-items: center;
           padding: 0.5rem;
           border-radius: 5px;
+
+          &:hover,
+          &:focus {
+          }
         }
         .swiper {
+          display: flex;
+          align-items: center;
+
           .swiper-button-prev,
           .swiper-button-next {
             color: var(--text);
@@ -146,6 +153,7 @@
             }
           }
           .swiper-wrapper {
+            height: 50%;
             .swiper-slide {
               display: flex;
               justify-content: center;
