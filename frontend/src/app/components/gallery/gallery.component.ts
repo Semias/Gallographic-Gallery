@@ -153,5 +153,85 @@ export class GalleryComponent implements AfterViewInit, OnInit {
         },
       ],
     },
+    {
+      thumbnailSrc:
+        '../../assets/images/gallery/thumbnails/mannheim-thumbnail.jpg',
+      thumbnailDescription: 'Mannheim | 2019',
+      thumbnailAlt: 'test1',
+      SliderImages: [
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim01.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim02.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim03.jpg',
+          alt: 'testalt',
+        },
+      ],
+    },
+    {
+      thumbnailSrc:
+        '../../assets/images/gallery/thumbnails/mannheim-thumbnail.jpg',
+      thumbnailDescription: 'Mannheim | 2019',
+      thumbnailAlt: 'test1',
+      SliderImages: [
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim01.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim02.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim03.jpg',
+          alt: 'testalt',
+        },
+      ],
+    },
+    {
+      thumbnailSrc:
+        '../../assets/images/gallery/thumbnails/mannheim-thumbnail.jpg',
+      thumbnailDescription: 'Mannheim | 2019',
+      thumbnailAlt: 'test1',
+      SliderImages: [
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim01.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim02.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim03.jpg',
+          alt: 'testalt',
+        },
+      ],
+    },
+    {
+      thumbnailSrc:
+        '../../assets/images/gallery/thumbnails/mannheim-thumbnail.jpg',
+      thumbnailDescription: 'Mannheim | 2019',
+      thumbnailAlt: 'test1',
+      SliderImages: [
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim01.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim02.jpg',
+          alt: 'testalt',
+        },
+        {
+          src: '../../assets/images/gallery/project/mannheim/mannheim03.jpg',
+          alt: 'testalt',
+        },
+      ],
+    },
   ];
 }
