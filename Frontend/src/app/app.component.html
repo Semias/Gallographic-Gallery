@@ -10,7 +10,7 @@
 </aside>
 <main>
   <app-gallery></app-gallery>
-  <div *ngFor="let repo of repos">
+  <!-- <div *ngFor="let repo of repos">
     <h3>Repository: {{ repo.name }}</h3>
     <p>{{ repo.private }}</p>
     <p>{{ repo.description }}</p>
@@ -19,7 +19,7 @@
     </div>
 
     <img src="{{ repo.owner.avatar_url }}" alt="" />
-  </div>
+  </div> -->
 </main>
 <footer>
   <div class="footer-container">
@@ -32,6 +32,7 @@
           href="https://www.linkedin.com/in/stefan-g-2329481b8/"
           target="blank"
           class="footer-social-linkedin"
+          title="link to LinkedIn profile"
         >
           <i class="icon-linkedin"></i>
         </a>
@@ -39,6 +40,7 @@
           href="https://github.com/Semias"
           target="blank"
           class="footer-social-github"
+          title="link to Github profile"
         >
           <i class="icon-github"></i>
         </a>
