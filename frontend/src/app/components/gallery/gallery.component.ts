@@ -77,19 +77,39 @@ export class GalleryComponent implements AfterViewInit, OnInit {
     {
       thumbnailSrc: '../../assets/images/gallery/thumbnails/gti-thumbnail.jpg',
       thumbnailDescription: 'GTI | 2020',
-      thumbnailAlt: 'test1',
+      thumbnailAlt: 'Album - GTI 2020',
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/gti/gti01.jpg',
-          alt: 'gti01',
+          alt: 'album picture GTI 01',
         },
         {
           src: '../../assets/images/gallery/project/gti/gti02.jpg',
-          alt: 'gti02',
+          alt: 'album picture GTI 02',
         },
         {
           src: '../../assets/images/gallery/project/gti/gti03.jpg',
-          alt: 'gti03',
+          alt: 'album picture GTI 03',
+        },
+        {
+          src: '../../assets/images/gallery/project/gti/gti04.jpg',
+          alt: 'album picture GTI 04',
+        },
+        {
+          src: '../../assets/images/gallery/project/gti/gti05.jpg',
+          alt: 'album picture GTI 05',
+        },
+        {
+          src: '../../assets/images/gallery/project/gti/gti06.jpg',
+          alt: 'album picture GTI 06',
+        },
+        {
+          src: '../../assets/images/gallery/project/gti/gti07.jpg',
+          alt: 'album picture GTI 07',
+        },
+        {
+          src: '../../assets/images/gallery/project/gti/gti08.jpg',
+          alt: 'album picture GTI 08',
         },
       ],
     },
@@ -97,35 +117,35 @@ export class GalleryComponent implements AfterViewInit, OnInit {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/summer2020-thumbnail.jpg',
       thumbnailDescription: 'Summer | 2020',
-      thumbnailAlt: 'test1',
+      thumbnailAlt: 'Album - Summer 2020',
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/summer2020/summer202001.jpg',
-          alt: 'testalt',
+          alt: 'album picture Summer 01',
         },
         {
           src: '../../assets/images/gallery/project/summer2020/summer202002.jpg',
-          alt: 'testalt',
+          alt: 'album picture Summer 02',
         },
         {
           src: '../../assets/images/gallery/project/summer2020/summer202003.jpg',
-          alt: 'testalt',
+          alt: 'album picture Summer 03',
         },
         {
           src: '../../assets/images/gallery/project/summer2020/summer202004.jpg',
-          alt: 'testalt',
+          alt: 'album picture Summer 04',
         },
         {
           src: '../../assets/images/gallery/project/summer2020/summer202005.jpg',
-          alt: 'testalt',
+          alt: 'album picture Summer 05',
         },
         {
           src: '../../assets/images/gallery/project/summer2020/summer202006.jpg',
-          alt: 'testalt',
+          alt: 'album picture Summer 06',
         },
         {
           src: '../../assets/images/gallery/project/summer2020/summer202007.jpg',
-          alt: 'testalt',
+          alt: 'album picture Summer 07',
         },
       ],
     },
@@ -134,43 +154,43 @@ export class GalleryComponent implements AfterViewInit, OnInit {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/autumm2019-thumbnail.jpg',
       thumbnailDescription: 'Autumm | 2019',
-      thumbnailAlt: 'test1',
+      thumbnailAlt: 'Album - Autumm 2019',
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201901.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 01',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201902.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 02',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201903.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 03',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201904.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 04',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201905.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 05',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201906.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 06',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201907.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 07',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201908.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 08',
         },
         {
           src: '../../assets/images/gallery/project/autumm2019/autumm201909.jpg',
-          alt: 'testalt',
+          alt: 'album picture Autumm 09',
         },
       ],
     },
@@ -178,23 +198,23 @@ export class GalleryComponent implements AfterViewInit, OnInit {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/berchtesgaden-thumbnail.jpg',
       thumbnailDescription: 'Berchtesgaden | 2019',
-      thumbnailAlt: 'test1',
+      thumbnailAlt: 'Album - Berchtesgaden 2019',
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/berchtesgaden/berchtesgaden01.jpg',
-          alt: 'testalt',
+          alt: 'album picture Berchtesgaden 01',
         },
         {
           src: '../../assets/images/gallery/project/berchtesgaden/berchtesgaden02.jpg',
-          alt: 'testalt',
+          alt: 'album picture Berchtesgaden 02',
         },
         {
           src: '../../assets/images/gallery/project/berchtesgaden/berchtesgaden03.jpg',
-          alt: 'testalt',
+          alt: 'album picture Berchtesgaden 03',
         },
         {
           src: '../../assets/images/gallery/project/berchtesgaden/berchtesgaden04.jpg',
-          alt: 'testalt',
+          alt: 'album picture Berchtesgaden 04',
         },
       ],
     },
@@ -207,35 +227,35 @@ export class GalleryComponent implements AfterViewInit, OnInit {
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim01.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 01',
         },
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim02.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 02',
         },
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim03.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 03',
         },
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim04.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 04',
         },
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim05.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 05',
         },
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim06.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 06',
         },
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim07.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 07',
         },
         {
           src: '../../assets/images/gallery/project/mannheim/mannheim08.jpg',
-          alt: 'testalt',
+          alt: 'album picture Mannheim 08',
         },
       ],
     },
@@ -247,19 +267,19 @@ export class GalleryComponent implements AfterViewInit, OnInit {
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/heidelberg/heidelberg01.jpg',
-          alt: 'testalt',
+          alt: 'album picture Heidelberg 01',
         },
         {
           src: '../../assets/images/gallery/project/heidelberg/heidelberg02.jpg',
-          alt: 'testalt',
+          alt: 'album picture Heidelberg 02',
         },
         {
           src: '../../assets/images/gallery/project/heidelberg/heidelberg03.jpg',
-          alt: 'testalt',
+          alt: 'album picture Heidelberg 03',
         },
         {
           src: '../../assets/images/gallery/project/heidelberg/heidelberg04.jpg',
-          alt: 'testalt',
+          alt: 'album picture Heidelberg 04',
         },
       ],
     },
@@ -267,19 +287,63 @@ export class GalleryComponent implements AfterViewInit, OnInit {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/barcelona-thumbnail.jpg',
       thumbnailDescription: 'Barcelona | 2019',
-      thumbnailAlt: 'Barcelona Album Thumbnail',
+      thumbnailAlt: 'Album - Barcelona 2019',
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/barcelona/barcelona01.jpg',
-          alt: 'barcelona01',
+          alt: 'album picture Barcelona 01',
         },
         {
           src: '../../assets/images/gallery/project/barcelona/barcelona02.jpg',
-          alt: 'barcelona02',
+          alt: 'album picture Barcelona 02',
         },
         {
           src: '../../assets/images/gallery/project/barcelona/barcelona03.jpg',
-          alt: 'barcelona03',
+          alt: 'album picture Barcelona 03',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona04.jpg',
+          alt: 'album picture Barcelona 04',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona05.jpg',
+          alt: 'album picture Barcelona 05',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona06.jpg',
+          alt: 'album picture Barcelona 06',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona07.jpg',
+          alt: 'album picture Barcelona 07',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona08.jpg',
+          alt: 'album picture Barcelona 08',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona09.jpg',
+          alt: 'album picture Barcelona 09',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona10.jpg',
+          alt: 'album picture Barcelona 10',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona11.jpg',
+          alt: 'album picture Barcelona 11',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona12.jpg',
+          alt: 'album picture Barcelona 12',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona13.jpg',
+          alt: 'album picture Barcelona 13',
+        },
+        {
+          src: '../../assets/images/gallery/project/barcelona/barcelona14.jpg',
+          alt: 'album picture Barcelona 14',
         },
       ],
     },
@@ -287,19 +351,19 @@ export class GalleryComponent implements AfterViewInit, OnInit {
       thumbnailSrc:
         '../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg',
       thumbnailDescription: 'Aalen | 2018',
-      thumbnailAlt: 'test1',
+      thumbnailAlt: 'Album - Aalen 2018',
       SliderImages: [
         {
           src: '../../assets/images/gallery/project/aalen/aalen01.jpg',
-          alt: 'aalen01',
+          alt: 'album picture Aalen 01',
         },
         {
           src: '../../assets/images/gallery/project/aalen/aalen02.jpg',
-          alt: 'aalen02',
+          alt: 'album picture Aalen 02',
         },
         {
           src: '../../assets/images/gallery/project/aalen/aalen03.jpg',
-          alt: 'aalen03',
+          alt: 'album picture Aalen 03',
         },
       ],
     },
