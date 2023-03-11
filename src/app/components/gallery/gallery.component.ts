@@ -18,6 +18,7 @@ import SwiperCore, {
   Navigation,
   // Autoplay,
 } from 'swiper';
+import { ApiService } from 'src/app/services/api.service';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
@@ -30,9 +31,24 @@ SwiperCore.use([Navigation, Pagination]);
 })
 export class GalleryComponent implements AfterViewInit, OnInit {
   @ViewChildren('galleryProject') galleryProject!: QueryList<ElementRef>;
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private albumData: ApiService) {}
+
+  // albumsStrapi = [];
+  // error: any = null;
 
   ngOnInit() {}
+
+  // async ngOnInit() {
+  //   try {
+  //     const response = await axios.get(
+  //       'http://localhost:1337/api/albums?populate=*'
+  //     );
+  //     this.albumsStrapi = response.data;
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     this.error = error;
+  //   }
+  // }
 
   ngAfterViewInit(): void {}
 

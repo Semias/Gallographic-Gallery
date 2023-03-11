@@ -7,6 +7,8 @@ import { catchError, throwError } from 'rxjs';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
+  // albums = [];
+  // error: any = null;
 
   getData() {
     return this.http.get('https://api.github.com/users/semias/repos').pipe(
@@ -16,4 +18,15 @@ export class ApiService {
       })
     );
   }
+
+  // async ngOnInit() {
+  //   try {
+  //     const response = await axios.get(
+  //       '​http://localhost:1337/api/albums?populate=*'
+  //     );
+  //     this.albums = response.data;
+  //   } catch (error) {
+  //     this.error = error;
+  //   }
+  // }
 }
