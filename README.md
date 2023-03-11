@@ -4,8 +4,10 @@ This project represents all my photos during the last few years.
 It Includes following functionality:
 
 - Dark Mode toggle that is connected to localStorage and get initialized with System Theme
-- Progress Bar that show how far you already scrolled
 - Photoalbum that opens on click a modal slider gallery
+
+
+![image](https://user-images.githubusercontent.com/62961421/223986245-01016b9c-3b1e-4a0a-a4ca-4408f62ae11d.png)
 
 ---
 
