@@ -47,24 +47,11 @@
         height: auto;
       }
 
-      @include media-breakpoint-down(sm) {
-        // width: 100%;
-      }
-
       &.active {
         .gallery-project-swiper {
           opacity: 1;
           pointer-events: all;
           z-index: 999;
-
-          // .swiper {
-          //   .swiper-wrapper {
-          //     .swiper-slide {
-          //       img {
-          //       }
-          //     }
-          //   }
-          // }
         }
       }
 

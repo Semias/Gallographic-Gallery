@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 //Angular Material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -14,7 +14,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 //Swiper
 import { SwiperModule } from 'swiper/angular';
-// import { SwiperHeaderComponent } from './components/swiper-header/swiper-header.component';
 
 //Gallery
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -27,7 +26,6 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
 @NgModule({
   declarations: [
     AppComponent,
-    // SwiperHeaderComponent,
     GalleryComponent,
     ThemeButtonComponent,
     SiteProgressComponent,

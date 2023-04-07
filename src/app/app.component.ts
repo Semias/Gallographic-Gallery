@@ -10,22 +10,10 @@ import { ApiService } from './services/api.service';
 export class AppComponent implements OnInit {
   title = 'Gallographic';
 
-  public repos: any = [];
-  public noData: any;
-  public results: any = [];
-
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.checkAndSetSystemTheme();
-    this.getAll();
-  }
-
-  getAll() {
-    this.apiService.getData().subscribe((results) => {
-      this.repos = results;
-      console.log(this.repos);
-    });
   }
 
   checkAndSetSystemTheme = () => {
