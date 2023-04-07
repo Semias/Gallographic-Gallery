@@ -245,9 +245,12 @@
                 object-fit: cover;
                 object-position: center;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                   max-height: 400px;
                 }
+                // @include media-breakpoint-down(sm) {
+                //   max-height: 400px;
+                // }
               }
             }
           }
