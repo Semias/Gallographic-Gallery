@@ -245,26 +245,10 @@
             }
           }
           .swiper-wrapper {
-            height: 100%;
-
-            @include media-breakpoint-down(xl) {
-              height: 75%;
-            }
-
-            @include media-breakpoint-down(lg) {
-              height: 60%;
-            }
-
-            @include media-breakpoint-down(md) {
-              height: 50%;
-            }
-            @include media-breakpoint-down(sm) {
-              height: 35%;
-            }
-
             .swiper-slide {
               display: flex;
               justify-content: center;
+              overflow: hidden;
               img {
                 width: auto;
                 height: 100%;
