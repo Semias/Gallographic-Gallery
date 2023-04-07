@@ -248,12 +248,17 @@
             .swiper-slide {
               display: flex;
               justify-content: center;
+              align-items: center;
               overflow: hidden;
               img {
                 width: auto;
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
+
+                @include media-breakpoint-down(xs) {
+                  max-height: 400px;
+                }
               }
             }
           }
