@@ -246,11 +246,14 @@
                 object-position: center;
 
                 @include media-breakpoint-down(lg) {
+                  max-height: 530px;
+                }
+                @include media-breakpoint-down(md) {
+                  max-height: 450px;
+                }
+                @include media-breakpoint-down(sm) {
                   max-height: 400px;
                 }
-                // @include media-breakpoint-down(sm) {
-                //   max-height: 400px;
-                // }
               }
             }
           }
