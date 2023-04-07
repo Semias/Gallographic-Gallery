@@ -57,14 +57,14 @@
           pointer-events: all;
           z-index: 999;
 
-          .swiper {
-            .swiper-wrapper {
-              .swiper-slide {
-                img {
-                }
-              }
-            }
-          }
+          // .swiper {
+          //   .swiper-wrapper {
+          //     .swiper-slide {
+          //       img {
+          //       }
+          //     }
+          //   }
+          // }
         }
       }
 
@@ -203,9 +203,9 @@
             transform: translateX(50%);
           }
 
-          &:hover,
-          &:focus {
-          }
+          // &:hover,
+          // &:focus {
+          // }
         }
         .swiper {
           display: flex;
