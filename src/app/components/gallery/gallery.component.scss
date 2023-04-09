@@ -1,25 +1,20 @@
-@import "../../../include-media/include-media";
-@import "../../../include-media/variables";
+// @import "../../../include-media/include-media";
 @import "../../../include-media/breakpoints";
+@import "../../../include-media/variables";
 
 // :host {
 .gallery-container {
   max-width: 1300px;
   margin: 0 auto;
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-down(xxl) {
     padding: 0 2rem;
   }
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(xl) {
     padding: 0 1rem;
   }
 
   .gallery-column {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    // row-gap: 4rem;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8rem;
@@ -27,10 +22,6 @@
     align-items: center;
 
     @include media-breakpoint-down(xxl) {
-      gap: 8rem;
-    }
-
-    @include media-breakpoint-down(xl) {
       gap: 2rem;
     }
 
@@ -43,7 +34,7 @@
       width: 100%;
       height: 600px;
 
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(xl) {
         height: auto;
       }
 
@@ -58,21 +49,17 @@
       &:nth-child(3n) {
         height: 400px;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
           height: auto;
         }
       }
       &:nth-child(5n + 2) {
         height: 400px;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
           height: auto;
         }
       }
-
-      // &:nth-child(3n) {
-      //   height: 400px;
-      // }
 
       .gallery-project-thumbnail {
         position: relative;
@@ -84,7 +71,7 @@
         -moz-transition: 0.3s;
         cursor: pointer;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
           height: auto;
         }
 
@@ -125,7 +112,7 @@
           -webkit-transition: 0.5s;
           -moz-transition: 0.5s;
 
-          @include media-breakpoint-down(lg) {
+          @include media-breakpoint-down(xl) {
             position: relative;
             left: unset;
             bottom: unset;
@@ -134,7 +121,7 @@
             background-color: var(--cibg2);
           }
 
-          @include media-breakpoint-down(lg) {
+          @include media-breakpoint-down(xl) {
             padding: 1rem 0.5rem;
           }
 
@@ -142,11 +129,11 @@
             text-transform: uppercase;
             font-weight: 400;
 
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
               font-size: 1.3rem;
             }
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
               font-size: 1.1rem;
             }
           }
@@ -168,8 +155,12 @@
         -webkit-transition: 0.3s;
         -moz-transition: 0.3s;
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
           background-color: var(--cibg);
+          padding: 2rem 1rem 1rem;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 4.5rem 1rem 1rem;
         }
 
         .swiper-close {
@@ -188,40 +179,26 @@
           @include media-breakpoint-down(md) {
             right: 50%;
             transform: translateX(50%);
+            top: 15px;
           }
-
-          // &:hover,
-          // &:focus {
-          // }
         }
         .swiper {
           display: flex;
           align-items: center;
 
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(md) {
             height: 100%;
           }
 
           .swiper-button-prev,
           .swiper-button-next {
             color: var(--text);
-
-            // @include media-breakpoint-down(lg) {
-            //   position: relative;
-            //   top: unset;
-            //   left: unset;
-            //   bottom: unset;
-            //   right: unset;
-            //   width: auto;
-            //   height: auto;
-            //   order: 3;
-            // }
           }
 
           .swiper-pagination {
             bottom: 1rem;
 
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
               display: none;
             }
 
@@ -245,14 +222,17 @@
                 object-fit: cover;
                 object-position: center;
 
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(xl) {
                   max-height: 530px;
                 }
-                @include media-breakpoint-down(md) {
+                @include media-breakpoint-down(lg) {
                   max-height: 450px;
                 }
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                   max-height: 400px;
+                }
+                @include media-breakpoint-down(sm) {
+                  max-height: 300px;
                 }
               }
             }
@@ -262,4 +242,3 @@
     }
   }
 }
-// }
