@@ -1,40 +1,24 @@
 <div class="gallery-container">
-  <div class="gallery-column">
-    <div
-      #galleryProject
-      *ngFor="let album of albums"
-      class="gallery-project"
-      (click)="openModal(galleryProject)"
-    >
-      <div class="gallery-project-thumbnail">
-        <div class="gallery-project-thumbnail-image">
-          <img src="{{ album.thumbnailSrc }}" alt="{{ album.thumbnailAlt }}" />
-        </div>
-        <div class="gallery-thumbnail-description">
-          <h2>{{ album.thumbnailDescription }}</h2>
-        </div>
-      </div>
-      <div class="gallery-project-swiper">
-        <div
-          class="swiper-close"
-          #closeSwiper
-          (click)="closeModal(galleryProject, $event)"
-        >
-          <mat-icon>close_fullscreen</mat-icon>
-        </div>
-        <swiper
-          [config]="config"
-          (swiper)="onSwiper($event)"
-          (slideChange)="onSlideChange()"
-        >
-          <ng-template
-            swiperSlide
-            *ngFor="let slideImage of album.SliderImages"
-          >
-            <img src="{{ slideImage.src }}" alt="{{ slideImage.alt }}" />
-          </ng-template>
-        </swiper>
-      </div>
-    </div>
-  </div>
+	<div class="gallery-column">
+		<div #galleryProject *ngFor="let album of albums" class="gallery-project" (click)="openModal(galleryProject)">
+			<div class="gallery-project-thumbnail">
+				<div class="gallery-project-thumbnail-image">
+					<img src="{{ album.thumbnailSrc }}" alt="{{ album.thumbnailAlt }}" />
+				</div>
+				<div class="gallery-thumbnail-description">
+					<h2>{{ album.thumbnailDescription }}</h2>
+				</div>
+			</div>
+			<div class="gallery-project-swiper">
+				<div class="swiper-close" #closeSwiper (click)="closeModal(galleryProject, $event)">
+					<mat-icon>close_fullscreen</mat-icon>
+				</div>
+				<swiper [config]="config" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
+					<ng-template swiperSlide *ngFor="let slideImage of album.SliderImages">
+						<img src="{{ slideImage.src }}" alt="{{ slideImage.alt }}" />
+					</ng-template>
+				</swiper>
+			</div>
+		</div>
+	</div>
 </div>

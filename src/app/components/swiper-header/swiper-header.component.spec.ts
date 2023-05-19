@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SwiperHeaderComponent } from './swiper-header.component';
+import { SwiperHeaderComponent } from "./swiper-header.component";
 
-describe('SwiperHeaderComponent', () => {
-  let component: SwiperHeaderComponent;
-  let fixture: ComponentFixture<SwiperHeaderComponent>;
+describe("SwiperHeaderComponent", () => {
+	let component: SwiperHeaderComponent;
+	let fixture: ComponentFixture<SwiperHeaderComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ SwiperHeaderComponent ]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [SwiperHeaderComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(SwiperHeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(SwiperHeaderComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it("should create", () => {
+		expect(component).toBeTruthy();
+	});
 });

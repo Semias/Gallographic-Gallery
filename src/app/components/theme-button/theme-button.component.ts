@@ -1,26 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-theme-button',
-  templateUrl: './theme-button.component.html',
-  styleUrls: ['./theme-button.component.scss'],
+	selector: "app-theme-button",
+	templateUrl: "./theme-button.component.html",
+	styleUrls: ["./theme-button.component.scss"],
 })
 export class ThemeButtonComponent implements OnInit {
-  ngOnInit() {}
+	ngOnInit() {}
 
-  body = document.querySelector('body');
-  themeSwitcher = document.querySelector('app-theme-button');
+	body = document.querySelector("body");
+	themeSwitcher = document.querySelector("app-theme-button");
 
-  toggleTheme() {
-    if (this.themeSwitcher?.className === 'dark-theme') {
-      this.themeSwitcher.className = 'light-theme';
-      this.body!.setAttribute('color-scheme', 'light');
-      localStorage.setItem('theme', 'light-theme');
-    } else if (this.themeSwitcher?.className === 'light-theme') {
-      this.themeSwitcher.className = 'dark-theme';
-      this.body!.setAttribute('color-scheme', 'dark');
-      localStorage.setItem('theme', 'dark-theme');
-    }
-  }
+	toggleTheme() {
+		if (this.themeSwitcher?.className === "dark-theme") {
+			this.themeSwitcher.className = "light-theme";
+			this.body!.setAttribute("color-scheme", "light");
+			localStorage.setItem("theme", "light-theme");
+		} else if (this.themeSwitcher?.className === "light-theme") {
+			this.themeSwitcher.className = "dark-theme";
+			this.body!.setAttribute("color-scheme", "dark");
+			localStorage.setItem("theme", "dark-theme");
+		}
+	}
 }
