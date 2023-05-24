@@ -7,12 +7,13 @@ import SwiperCore, {
 	SwiperOptions,
 	Pagination,
 	Navigation,
+	Keyboard,
 	// Autoplay,
 } from "swiper";
 import { ApiService } from "src/app/services/api.service";
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Keyboard]);
 
 @Component({
 	selector: "app-gallery",
@@ -30,12 +31,13 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 
 	openModal($event: any) {
 		this.renderer.addClass($event, "active");
-		$event.querySelector("swiper").focus();
+		$event.querySelector(".swiper-close").focus();
 	}
 
 	closeModal(el: any, $event: any) {
 		$event.stopPropagation();
 		this.renderer.removeClass(el, "active");
+		el.focus();
 	}
 
 	//SWIPER OPTIONS
@@ -47,6 +49,11 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 			clickable: true,
 			// el: '.swiper-pagination',
 			// type: 'bullets',
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: false,
+			pageUpDown: true,
 		},
 		// scrollbar: { draggable: true },
 		// autoplay: {

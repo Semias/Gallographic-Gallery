@@ -10,7 +10,7 @@
 				</div>
 			</div>
 			<div class="gallery-project-swiper">
-				<div class="swiper-close" #closeSwiper (click)="closeModal(galleryProject, $event)">
+				<div class="swiper-close" role="button" aria-label="close Modal" tabindex="1" #closeSwiper (click)="closeModal(galleryProject, $event)" (keydown.enter)="closeModal(galleryProject, $event)">
 					<mat-icon>close_fullscreen</mat-icon>
 				</div>
 				<swiper [config]="config" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
