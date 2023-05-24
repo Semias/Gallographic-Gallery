@@ -1,6 +1,6 @@
 <div class="gallery-container">
 	<div class="gallery-column">
-		<div #galleryProject *ngFor="let album of albums" class="gallery-project" (click)="openModal(galleryProject)">
+		<div tabindex="0" #galleryProject *ngFor="let album of albums" class="gallery-project" (click)="openModal(galleryProject)" (keydown.enter)="openModal(galleryProject)">
 			<div class="gallery-project-thumbnail">
 				<div class="gallery-project-thumbnail-image">
 					<img src="{{ album.thumbnailSrc }}" alt="{{ album.thumbnailAlt }}" />

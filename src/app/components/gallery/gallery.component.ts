@@ -30,13 +30,12 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 
 	openModal($event: any) {
 		this.renderer.addClass($event, "active");
-		console.log("swiper-opened");
+		$event.querySelector("swiper").focus();
 	}
 
 	closeModal(el: any, $event: any) {
 		$event.stopPropagation();
 		this.renderer.removeClass(el, "active");
-		console.log("swiper-closed");
 	}
 
 	//SWIPER OPTIONS
