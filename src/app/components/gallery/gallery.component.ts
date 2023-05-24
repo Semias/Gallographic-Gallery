@@ -67,7 +67,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 	//ALBUMS PHOTO DATA
 	albums = [
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/gti-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/gti-thumbnail.webp",
 			thumbnailDescription: "GTI | 2020",
 			thumbnailAlt: "Album - GTI 2020",
 			SliderImages: [
@@ -106,7 +106,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 			],
 		},
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/summer2020-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/summer2020-thumbnail.webp",
 			thumbnailDescription: "Summer | 2020",
 			thumbnailAlt: "Album - Summer 2020",
 			SliderImages: [
@@ -142,7 +142,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 		},
 
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/autumm2019-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/autumm2019-thumbnail.webp",
 			thumbnailDescription: "Autumm | 2019",
 			thumbnailAlt: "Album - Autumm 2019",
 			SliderImages: [
@@ -185,7 +185,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 			],
 		},
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/berchtesgaden-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/berchtesgaden-thumbnail.webp",
 			thumbnailDescription: "Berchtesgaden | 2019",
 			thumbnailAlt: "Album - Berchtesgaden 2019",
 			SliderImages: [
@@ -209,7 +209,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 		},
 
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/mannheim-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/mannheim-thumbnail.webp",
 			thumbnailDescription: "Mannheim | 2019",
 			thumbnailAlt: "Album - Mannheim 2019",
 			SliderImages: [
@@ -248,7 +248,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 			],
 		},
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/heidelberg-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/heidelberg-thumbnail.webp",
 			thumbnailDescription: "Heidelberg | 2019",
 			thumbnailAlt: "Album - Heidelberg 2019",
 			SliderImages: [
@@ -271,7 +271,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 			],
 		},
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/barcelona-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/barcelona-thumbnail.webp",
 			thumbnailDescription: "Barcelona | 2019",
 			thumbnailAlt: "Album - Barcelona 2019",
 			SliderImages: [
@@ -334,7 +334,7 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 			],
 		},
 		{
-			thumbnailSrc: "../../assets/images/gallery/thumbnails/aalen-thumbnail.jpg",
+			thumbnailSrc: "../../assets/images/gallery/thumbnails/aalen-thumbnail.webp",
 			thumbnailDescription: "Aalen | 2018",
 			thumbnailAlt: "Album - Aalen 2018",
 			SliderImages: [
