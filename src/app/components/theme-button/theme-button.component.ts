@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
 	selector: "app-theme-button",
@@ -8,16 +8,13 @@ import { Component, OnInit } from "@angular/core";
 export class ThemeButtonComponent implements OnInit {
 	ngOnInit() {}
 
-	body = document.querySelector("body");
-	themeSwitcher = document.querySelector("app-theme-button");
+	body = document.querySelector("body")!;
 
 	toggleTheme() {
-		if (this.themeSwitcher?.className === "dark-theme") {
-			this.themeSwitcher.className = "light-theme";
+		if (this.body?.getAttribute("color-scheme") === "dark") {
 			this.body!.setAttribute("color-scheme", "light");
 			localStorage.setItem("theme", "light-theme");
-		} else if (this.themeSwitcher?.className === "light-theme") {
-			this.themeSwitcher.className = "dark-theme";
+		} else if (this.body?.getAttribute("color-scheme") === "light") {
 			this.body!.setAttribute("color-scheme", "dark");
 			localStorage.setItem("theme", "dark-theme");
 		}

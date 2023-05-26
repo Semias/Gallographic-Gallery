@@ -12,30 +12,13 @@
 		transform: scale(0.9);
 	}
 
-	&.dark-theme {
-		.dark-theme-button {
-			display: flex;
-			background-color: var(--cibg2);
-		}
-		.light-theme-button {
-			display: none;
-		}
-	}
-
-	&.light-theme {
-		.dark-theme-button {
-			display: none;
-		}
-		.light-theme-button {
-			display: flex;
-			background-color: var(--cibg2);
-		}
-	}
-
 	button {
 		padding: 1rem;
 		border-radius: 50%;
 		box-shadow: var(--shadow1);
 		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
