@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewEncapsulation, ViewChildren } from "@angular/core";
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewEncapsulation, ViewChildren, HostListener } from "@angular/core";
 // @ts-ignore
 import { SwiperComponent } from "swiper/angular";
 
@@ -40,6 +40,17 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 		el.focus();
 	}
 
+	@HostListener("document:keyup.escape")
+	handleEscapeKey(): void {
+		const galleryElementArray = this.galleryProject.toArray();
+		galleryElementArray.forEach((item) => {
+			console.log(item.nativeElement);
+			if (item.nativeElement.classList.contains("active")) {
+				item.nativeElement.classList.remove("active");
+			}
+		});
+	}
+
 	//SWIPER OPTIONS
 	config: SwiperOptions = {
 		slidesPerView: 1,
@@ -47,28 +58,17 @@ export class GalleryComponent implements AfterViewInit, OnInit {
 		navigation: true,
 		pagination: {
 			clickable: true,
-			// el: '.swiper-pagination',
-			// type: 'bullets',
 		},
 		keyboard: {
 			enabled: true,
 			onlyInViewport: false,
 			pageUpDown: true,
 		},
-		// scrollbar: { draggable: true },
-		// autoplay: {
-		//   delay: 5000,
-		//   disableOnInteraction: false,
-		// },
 		loop: true,
 		speed: 500,
 	};
-	onSwiper(swiper: any) {
-		// console.log(swiper);
-	}
-	onSlideChange() {
-		// console.log('slide change');
-	}
+	onSwiper(swiper: any) {}
+	onSlideChange() {}
 
 	//ALBUMS PHOTO DATA
 	albums = [
