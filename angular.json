@@ -57,19 +57,19 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-						"production": {
-							"browserTarget": "gallographic-angular:build:production"
+            "production": {
+              "buildTarget": "gallographic-angular:build:production"
 						},
-						"development": {
-							"browserTarget": "gallographic-angular:build:development"
+            "development": {
+              "buildTarget": "gallographic-angular:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "gallographic-angular:build"
+          "options": {
+            "buildTarget": "gallographic-angular:build"
 					}
 				},
 				"test": {
