@@ -11,7 +11,6 @@
 			</div>
 			<div class="gallery-project-swiper">
 				<div class="swiper-close" role="button" aria-label="Close Modal" tabindex="0" #closeSwiper (click)="closeModal(galleryProject, $event)" (keydown.enter)="closeModal(galleryProject, $event)">
-					<mat-icon>close_fullscreen</mat-icon>
 				</div>
 				<swiper [config]="config" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
 					<ng-template swiperSlide *ngFor="let slideImage of album.SliderImages">

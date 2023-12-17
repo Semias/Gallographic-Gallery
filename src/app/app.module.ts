@@ -21,7 +21,6 @@ import { GalleryComponent } from "./components/gallery/gallery.component";
 //SidePanel
 import { ThemeButtonComponent } from "./components/theme-button/theme-button.component";
 import { ScrollTopComponent } from "./components/scroll-top/scroll-top.component";
-
 @NgModule({
 	declarations: [AppComponent, GalleryComponent, ThemeButtonComponent, ScrollTopComponent],
 	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, SwiperModule, MatSlideToggleModule, MatTabsModule, MatButtonModule, MatIconModule, HttpClientModule],
