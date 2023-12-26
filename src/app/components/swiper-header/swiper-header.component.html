@@ -1,5 +1,11 @@
-<swiper [config]="config" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
-	<ng-template swiperSlide *ngFor="let headerImage of headerImages">
-		<img src="{{ headerImage.src }}" alt="{{ headerImage.alt }}" />
-	</ng-template>
+<swiper
+  [config]="config"
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"
+>
+  @for (headerImage of headerImages; track headerImage) {
+  <ng-template swiperSlide>
+    <img src="{{ headerImage.src }}" alt="{{ headerImage.alt }}" />
+  </ng-template>
+  }
 </swiper>
