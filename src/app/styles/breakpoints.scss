@@ -1,0 +1,19 @@
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1500px,
+) !default;
+
+@mixin breakpoint-down($user-value) {
+  $my-map: map-get($breakpoints, $user-value);
+  @if $my-map {
+    @media screen and (max-width: #{my-map}) {
+      @content;
+    }
+  } @else {
+    @error "Please use correct breakpoint, no valid breakpoint!";
+  }
+}
