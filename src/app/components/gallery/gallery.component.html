@@ -25,7 +25,9 @@
           #closeSwiper
           (click)="closeModal(galleryProject, $event)"
           (keydown.enter)="closeModal(galleryProject, $event)"
-        ></div>
+        >
+          <i class="pi pi-times"></i>
+        </div>
         <swiper
           [config]="config"
           (swiper)="onSwiper($event)"

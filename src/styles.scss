@@ -47,10 +47,10 @@ button {
   color: inherit;
   background: none;
   -webkit-appearance: none;
-  appearance: none;
   -moz-appearance: none;
-  border-radius: none;
+  appearance: none;
   -webkit-border-radius: 0;
+  border-radius: none;
 }
 
 html,
@@ -58,9 +58,9 @@ body {
   font-family: "Work Sans";
   background-color: var(--cibg);
   color: var(--text);
-  transition: 0.2s;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
+  transition: 0.2s;
 
   &[color-scheme="dark"] {
     --text: var(--text-light);
@@ -77,7 +77,7 @@ body {
     --cibg: var(--cibg-light);
     --cibg-contrast: var(--cibg-dark);
     --cibg2: var(--cibg2-light);
-    --cibg3: var(--cibg3-dark);
+    --cibg3: var(--cibg3-light);
     --cibg-transparency08: var(--cibg-light-transparency-08);
     --cibg-transparency09: var(--cibg-light-transparency-09);
   }
