@@ -5,8 +5,7 @@
       tabindex="0"
       #galleryProject
       class="gallery-project"
-      (click)="openModal(galleryProject)"
-      (keydown.enter)="openModal(galleryProject)"
+      (click)="openModal()"
     >
       <div class="gallery-project-thumbnail">
         <div class="gallery-project-thumbnail-image">
@@ -16,31 +15,33 @@
           <h2>{{ album.thumbnailDescription }}</h2>
         </div>
       </div>
-      <div class="gallery-project-swiper">
-        <div
-          class="swiper-close"
-          role="button"
-          aria-label="Close Modal"
-          tabindex="0"
-          #closeSwiper
-          (click)="closeModal(galleryProject, $event)"
-          (keydown.enter)="closeModal(galleryProject, $event)"
-        >
-          <i class="pi pi-times"></i>
-        </div>
-        <swiper
-          [config]="config"
-          (swiper)="onSwiper($event)"
-          (slideChange)="onSlideChange()"
-        >
-          @for (slideImage of album.SliderImages; track slideImage) {
-          <ng-template swiperSlide>
-            <img src="{{ slideImage.src }}" alt="{{ slideImage.alt }}" />
-          </ng-template>
-          }
-        </swiper>
-      </div>
     </div>
     }
+    <p-dialog
+      [(visible)]="openModalDialog"
+      [modal]="true"
+      header="Header"
+      [style]="{ width: '90vw', height: '90vh' }"
+      [draggable]="false"
+      [resizable]="false"
+    >
+      <swiper-container
+        #swiper
+        (swiperslidechange)="swiperSlideChanged($event)"
+        [loop]="true"
+        [pagination]="true"
+        [zoom]="true"
+      >
+        @for (album of albums; track $index) { @for (sliderImage of
+        album.SliderImages; track $index) {
+        <swiper-slide>
+          <div class="swiper-zoom-container">
+            <img src="{{ sliderImage.src }}" alt="" /></div
+        ></swiper-slide>
+        } }
+      </swiper-container>
+      <button (click)="goPrev()">prev</button>
+      <button (click)="goNext()">next</button>
+    </p-dialog>
   </div>
 </div>
