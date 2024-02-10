@@ -1,7 +1,13 @@
 <div class="gallery-container">
   <div class="gallery-column">
     @for (album of albums; track album) {
-    <div #galleryProject class="gallery-project" (click)="openModal(album)">
+    <div
+      #galleryProject
+      class="gallery-project"
+      (click)="openModal(album)"
+      (keydown.enter)="openModal(album)"
+      tabindex="0"
+    >
       <div
         class="gallery-project-thumbnail"
         pAnimateOnScroll
@@ -18,6 +24,7 @@
     </div>
     }
     <p-dialog
+      pFocusTrap
       [(visible)]="openModalDialog"
       [modal]="true"
       [style]="{ width: '90vw', height: '90vh' }"

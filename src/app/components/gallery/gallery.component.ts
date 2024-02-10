@@ -43,7 +43,7 @@ export class GalleryComponent {
     this.openModalDialog = true;
     this.album = album;
     this.selectedAlbumSlides = album.SliderImages;
-    console.log(this.selectedAlbumSlides);
+    this.swiperRef?.nativeElement.focus();
   }
 
   //ALBUMS PHOTO DATA
