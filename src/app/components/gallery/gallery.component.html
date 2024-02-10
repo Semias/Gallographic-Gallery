@@ -1,14 +1,13 @@
 <div class="gallery-container">
   <div class="gallery-column">
     @for (album of albums; track album) {
-    <div
-      tabindex="0"
-      #galleryProject
-      class="gallery-project"
-      (click)="openModal(galleryProject)"
-      (keydown.enter)="openModal(galleryProject)"
-    >
-      <div class="gallery-project-thumbnail">
+    <div #galleryProject class="gallery-project" (click)="openModal(album)">
+      <div
+        class="gallery-project-thumbnail"
+        pAnimateOnScroll
+        enterClass="fadein"
+        leaveClass="fadeout"
+      >
         <div class="gallery-project-thumbnail-image">
           <img src="{{ album.thumbnailSrc }}" alt="{{ album.thumbnailAlt }}" />
         </div>
@@ -16,31 +15,35 @@
           <h2>{{ album.thumbnailDescription }}</h2>
         </div>
       </div>
-      <div class="gallery-project-swiper">
-        <div
-          class="swiper-close"
-          role="button"
-          aria-label="Close Modal"
-          tabindex="0"
-          #closeSwiper
-          (click)="closeModal(galleryProject, $event)"
-          (keydown.enter)="closeModal(galleryProject, $event)"
-        >
-          <i class="pi pi-times"></i>
-        </div>
-        <swiper
-          [config]="config"
-          (swiper)="onSwiper($event)"
-          (slideChange)="onSlideChange()"
-        >
-          @for (slideImage of album.SliderImages; track slideImage) {
-          <ng-template swiperSlide>
-            <img src="{{ slideImage.src }}" alt="{{ slideImage.alt }}" />
-          </ng-template>
-          }
-        </swiper>
-      </div>
     </div>
     }
+    <p-dialog
+      [(visible)]="openModalDialog"
+      [modal]="true"
+      [style]="{ width: '90vw', height: '90vh' }"
+      [draggable]="false"
+      [resizable]="false"
+      (onHide)="this.album = undefined"
+      [maximizable]="true"
+      [dismissableMask]="true"
+      [transitionOptions]="'200ms cubic-bezier(0,0,.58,1)'"
+    >
+      <button (click)="goPrev()" class="swiper-prev swiper-control">
+        <i class="pi pi-arrow-left"></i>
+      </button>
+
+      <swiper-container #swiper [loop]="true" [pagination]="true" [zoom]="true">
+        @if (this.album) { @for (sliderImage of selectedAlbumSlides; track
+        $index) {
+        <swiper-slide>
+          <div class="swiper-zoom-container">
+            <img src="{{ sliderImage.src }}" alt="" /></div
+        ></swiper-slide>
+        } }
+      </swiper-container>
+      <button (click)="goNext()" class="swiper-next swiper-control">
+        <i class="pi pi-arrow-right"></i>
+      </button>
+    </p-dialog>
   </div>
 </div>

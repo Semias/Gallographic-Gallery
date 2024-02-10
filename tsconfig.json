@@ -5,10 +5,10 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": ["app/*"],
-      "@components/*": ["./src/app/components/*"],
-      "@directives/*": ["./src/app/directives/*"],
-      "@services/*": ["./src/app/services/*"],
-      "@types/*": ["./src/app/types/*"]
+      "@components/*": ["src/app/components/*"],
+      "@directives/*": ["src/app/directives/*"],
+      "@services/*": ["src/app/services/*"],
+      "@app-types/*": ["src/app/types/*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -27,7 +27,6 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"]
-    // "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -17,49 +17,25 @@
   .gallery-column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8rem;
-    row-gap: 1rem;
     align-items: center;
+    gap: 7rem;
 
-    @include media-breakpoint-down(xxl) {
-      gap: 2rem;
+    @include media-breakpoint-down(xl) {
+      gap: 4rem;
+    }
+    @include media-breakpoint-down(md) {
+      gap: 3rem;
     }
 
     @include media-breakpoint-down(sm) {
       grid-template-columns: repeat(1, 1fr);
       justify-items: center;
+      gap: 2rem;
     }
 
     .gallery-project {
       width: 100%;
-      height: 600px;
-
-      @include media-breakpoint-down(xl) {
-        height: auto;
-      }
-
-      &.active {
-        .gallery-project-swiper {
-          opacity: 1;
-          pointer-events: all;
-          z-index: 999;
-        }
-      }
-
-      &:nth-child(3n) {
-        height: 400px;
-
-        @include media-breakpoint-down(xl) {
-          height: auto;
-        }
-      }
-      &:nth-child(5n + 2) {
-        height: 400px;
-
-        @include media-breakpoint-down(xl) {
-          height: auto;
-        }
-      }
+      height: auto;
 
       .gallery-project-thumbnail {
         position: relative;
@@ -77,10 +53,6 @@
 
         &:hover {
           box-shadow: var(--shadow1);
-
-          .gallery-thumbnail-description {
-            transform: translateY(0);
-          }
         }
 
         .gallery-project-thumbnail-image {
@@ -98,32 +70,18 @@
         }
 
         .gallery-thumbnail-description {
-          position: absolute;
-          bottom: 0;
-          left: 0;
+          padding: 1rem 0.5rem;
           width: 100%;
           height: 100%;
           background-color: var(--cibg-transparency08);
           display: flex;
           justify-content: center;
           align-items: center;
-          transform: translateY(100%);
           -webkit-transition: 0.5s;
           -moz-transition: 0.5s;
           transition: 0.5s;
-
-          @include media-breakpoint-down(xl) {
-            position: relative;
-            left: unset;
-            bottom: unset;
-            transform: unset;
-            padding: 2rem 0.5rem;
-            background-color: var(--cibg2);
-          }
-
-          @include media-breakpoint-down(xl) {
-            padding: 1rem 0.5rem;
-          }
+          position: relative;
+          background-color: var(--cibg2);
 
           h2 {
             text-transform: uppercase;
@@ -139,110 +97,86 @@
           }
         }
       }
+    }
 
-      .gallery-project-swiper {
-        display: flex;
-        position: fixed;
-        opacity: 0;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: var(--cibg-transparency09);
-        padding: 5rem 1rem;
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        transition: 0.3s;
+    p-dialog {
+      .p-dialog-mask {
+        background-color: var(--cibg-transparency08) !important;
+        backdrop-filter: blur(30px);
 
-        @include media-breakpoint-down(lg) {
-          background-color: var(--cibg);
-          padding: 2rem 1rem 1rem;
-        }
-        @include media-breakpoint-down(md) {
-          padding: 4.5rem 1rem 1rem;
-        }
+        .p-dialog {
+          box-shadow: none;
 
-        .swiper-close {
-          position: fixed;
-          right: 30px;
-          top: 30px;
-          z-index: 9999;
-          cursor: pointer;
-          border: 2px solid var(--cibg-contrast);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 0.5rem;
-          border-radius: 5px;
-
-          @include media-breakpoint-down(md) {
-            right: 50%;
-            transform: translateX(50%);
-            top: 15px;
+          &.p-dialog-maximized {
+            .p-dialog-content {
+              border-radius: 0;
+            }
           }
 
-          &:focus {
-            outline: 4px solid black;
-            border: 3px solid white;
-            background-color: white;
-            color: black;
-          }
-          &:active {
-            transform: scale(0.9);
-          }
-        }
-        .swiper {
-          display: flex;
-          align-items: center;
-
-          @include media-breakpoint-down(md) {
-            height: 100%;
-          }
-
-          .swiper-button-prev,
-          .swiper-button-next {
+          .p-dialog-header {
+            position: absolute;
+            background-color: transparent;
+            width: 100%;
+            z-index: 4;
             color: var(--text);
+            padding: 0.5rem;
+
+            .p-dialog-header-icons {
+              button {
+                padding: 1.5rem;
+                border-radius: 9px;
+
+                &:hover,
+                &:focus {
+                  cursor: pointer;
+                  background-color: rgba(255, 255, 255, 0.1);
+                }
+              }
+            }
           }
+          .p-dialog-content {
+            background-color: rgba(0, 0, 0, 0);
+            display: flex;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
 
-          .swiper-pagination {
-            bottom: 1rem;
+            .swiper-control {
+              position: absolute;
+              top: 0;
+              height: 100%;
+              width: 5%;
+              z-index: 2;
+              transition: 0.2s;
+              color: var(--text);
 
-            @include media-breakpoint-down(xl) {
-              display: none;
+              &:hover,
+              &:focus {
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.1);
+              }
+              &.swiper-prev {
+                left: 0;
+              }
+              &.swiper-next {
+                right: 0;
+              }
             }
 
-            .swiper-pagination-bullet {
-              width: 30px;
-              height: 5px;
-              background: white;
-              border-radius: 3px;
-            }
-          }
-          .swiper-wrapper {
-            .swiper-slide {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              overflow: hidden;
+            swiper-container {
+              width: 100%;
+              height: 100%;
 
-              img {
-                width: auto;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
+              swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
 
-                @include media-breakpoint-down(xl) {
-                  max-height: 530px;
-                }
-                @include media-breakpoint-down(lg) {
-                  max-height: 450px;
-                }
-                @include media-breakpoint-down(md) {
-                  max-height: 400px;
-                }
-                @include media-breakpoint-down(sm) {
-                  max-height: 300px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  object-position: center;
                 }
               }
             }
