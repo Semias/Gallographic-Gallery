@@ -1,6 +1,4 @@
-// @import "../include-media/include-media";
-@import "styles/include-media/breakpoints";
-@import "styles/include-media/variables";
+@import "styles/breakpoints.scss";
 
 [color-scheme="light"] {
   :host {
@@ -56,11 +54,10 @@ aside {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  // height: 100%;
   padding: 3rem 0px;
   gap: 2rem;
 
-  @include media-breakpoint-down(md) {
+  @include breakpoint-down(md) {
     height: auto;
     padding: 0;
     gap: 1rem;
@@ -76,10 +73,10 @@ aside {
 main {
   margin-bottom: 10rem;
 
-  @include media-breakpoint-down(lg) {
+  @include breakpoint-down(lg) {
     margin-bottom: 7rem;
   }
-  @include media-breakpoint-down(md) {
+  @include breakpoint-down(md) {
     margin-bottom: 5rem;
   }
 }
@@ -91,7 +88,7 @@ footer {
   -moz-transition: 0.2s;
   transition: 0.2s;
 
-  @include media-breakpoint-down(md) {
+  @include breakpoint-down(md) {
     padding-bottom: 7rem;
   }
 

@@ -1,10 +1,3 @@
-@import "assets/fonts/fonts.css";
-
-//PrimeNG
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
-@import "primeicons/primeicons.css";
-
 :root {
   --ciprime: #f55050;
 
@@ -40,7 +33,6 @@
 
   --shadow1: 0px 0px 8px rgba(0, 0, 0, 0.4);
 
-  // --swiper-pagination-color: var(--ciprime);
   --swiper-pagination-color: white;
   --swiper-pagination-bullet-inactive-color: white;
   --swiper-pagination-bullet-size: 15px;

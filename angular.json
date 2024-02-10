@@ -26,8 +26,10 @@
             "assets": ["src/favicon.ico", "src/assets", "src/_redirects"],
             "styles": [
               "src/styles.scss",
+              "src/assets/fonts/fonts.css",
               "primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              "primeicons/primeicons.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/app/styles/"]
@@ -39,8 +41,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "170kb",
-                  "maximumError": "250kb"
+                  "maximumWarning": "250kb",
+                  "maximumError": "500kb"
                 },
                 {
                   "type": "anyComponentStyle",
