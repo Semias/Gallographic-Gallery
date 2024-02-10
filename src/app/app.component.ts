@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Gallographic';
 
-  // constructor(private primengConfig: PrimeNGConfig) {}
+  constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit() {
     this.checkAndSetSystemTheme();
-    // this.primengConfig.ripple = true;
+    this.primengConfig.ripple = true;
   }
 
   checkAndSetSystemTheme = () => {

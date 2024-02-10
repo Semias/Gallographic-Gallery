@@ -25,6 +25,14 @@
   --cibg-light-transparency-09: rgba(255, 255, 255, 0.9);
 
   --shadow1: 0px 0px 8px rgba(0, 0, 0, 0.4);
+
+  // --swiper-pagination-color: var(--ciprime);
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-pagination-bullet-size: 15px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-bullet-border-radius: 3px;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
 }
 
 *,

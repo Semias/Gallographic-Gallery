@@ -9,6 +9,7 @@ import { DialogModule } from 'primeng/dialog';
 import { CarouselModule } from 'primeng/carousel';
 import { PrimeNGConfig } from 'primeng/api';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 //Gallery
 import { GalleryComponent } from '@components/gallery/gallery.component';
@@ -36,6 +37,7 @@ register();
     ProgressSpinnerModule,
     DialogModule,
     CarouselModule,
+    AnimateOnScrollModule,
   ],
   providers: [PrimeNGConfig],
   bootstrap: [AppComponent],

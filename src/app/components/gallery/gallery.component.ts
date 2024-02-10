@@ -1,16 +1,14 @@
+import { Album } from '@app-types/album.type';
+import { SliderImages } from '@app-types/sliderImages.type';
+
 import {
-  AfterViewInit,
   Component,
   ElementRef,
-  OnInit,
   QueryList,
-  Renderer2,
   ViewEncapsulation,
   ViewChildren,
   ViewChild,
 } from '@angular/core';
-
-import Swiper from 'swiper';
 
 @Component({
   selector: 'app-gallery',
@@ -20,11 +18,18 @@ import Swiper from 'swiper';
 })
 export class GalleryComponent {
   openModalDialog: boolean = false;
-  @ViewChild('swiper') swiperRef?: ElementRef;
+  album?: Album;
+  selectedAlbumSlides: SliderImages[] = [];
 
+  @ViewChild('swiper') swiperRef?: ElementRef;
   @ViewChildren('galleryProject') galleryProject!: QueryList<ElementRef>;
 
   constructor() {}
+
+  onHide() {
+    this.album = undefined;
+    this.selectedAlbumSlides = [];
+  }
 
   goPrev() {
     this.swiperRef?.nativeElement.swiper.slidePrev();
@@ -34,16 +39,15 @@ export class GalleryComponent {
     this.swiperRef?.nativeElement.swiper.slideNext();
   }
 
-  swiperSlideChanged(e: any) {
-    console.log(e);
-  }
-
-  openModal() {
+  openModal(album: Album) {
     this.openModalDialog = true;
+    this.album = album;
+    this.selectedAlbumSlides = album.SliderImages;
+    console.log(this.selectedAlbumSlides);
   }
 
   //ALBUMS PHOTO DATA
-  albums = [
+  albums: Album[] = [
     {
       thumbnailSrc: '../../assets/images/gallery/thumbnails/gti-thumbnail.webp',
       thumbnailDescription: 'GTI | 2020',
