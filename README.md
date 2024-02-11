@@ -7,7 +7,8 @@ It Includes following functionality:
 - Photoalbum that opens on click a modal slider gallery
 
 
-![image](https://user-images.githubusercontent.com/62961421/223986245-01016b9c-3b1e-4a0a-a4ca-4408f62ae11d.png)
+![grafik](https://github.com/Semias/Gallographic-Gallery/assets/62961421/5783fe5d-97ef-4bc1-a4d8-8172b7e6bd94)
+
 
 ---
 
