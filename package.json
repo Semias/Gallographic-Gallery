@@ -1,6 +1,6 @@
 {
   "name": "gallographic-angular",
-  "version": "0.0.0",
+  "version": "1.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.8",
-    "@angular/cli": "~17.0.8",
+    "@angular/cli": "~17.3.17",
     "@angular/compiler-cli": "^17.0.3",
     "@angular/localize": "^17.0.3",
     "@types/jasmine": "~4.3.0",
